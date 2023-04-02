@@ -190,6 +190,21 @@ img {
     text-decoration: none;
     color: #708c98;
 }
+.footer{
+    background-color: #18191A;
+    color: #708c98;
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+.footer ul {
+    width: 100%;
+    list-style: none;
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 @media screen and (max-width: 1100px){
     .home p{
         font-size: 2rem;
