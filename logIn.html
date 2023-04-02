@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logIn</title>
+    <script src="https://kit.fontawesome.com/f50dd2922d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="logInStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cambo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logIn">
+        <div class="initials">
+            <p>Username:</p>
+            <input type="text" class="email" id="username" placeholder="Username">
+            <p>Password:</p>
+            <input type="password" class="password" id="password" placeholder="Password">
+        </div>
+        <div class="extra">
+            <a id="logInfo" href="index.html" onclick="logUser('user')">Log In</a>
+            <a id="logInfo" href="index.html" onclick="logUser('Guest')" style="background-color: #18191A; color: #708c98;">Log in as Guest</a>
+            <a href="">Forgot password?</a>
+        </div>
+    </div>
+    <script src="logIn.js" defer></script>
+    <script src="index.js" defer></script>
+</body>
+</html>

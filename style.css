@@ -1,0 +1,243 @@
+html, body {
+    font-family: 'Cambo', serif;
+    color: #708c98;
+    box-sizing: border-box;
+    background: lightgray;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    width: 100vw;
+    scroll-behavior: smooth;
+}
+.navbar {
+    background-color: #18191A;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-direction: row;
+    z-index: 1;
+    position: fixed;
+}
+.logo, .info, .logIn, .settings-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.info a {
+    display: flex;
+    margin: 0 20px;
+    padding: 5px;
+    border-bottom: 1px solid #708c98;
+    text-decoration: none;
+    color: #708c98;
+}
+.logIn a {
+    border: 1px solid #708c98;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    color: #708c98;
+}
+#user{
+    border: none;
+}
+.navbar a:hover {
+    color: #18191A;
+    border-radius: 5px;
+    background-color: #708c98;
+    cursor: pointer;
+}
+.home{
+    background: url(https://prishtinainsight.com/wp-content/uploads/2019/10/VV_Albin-Kurtii_Zgjedhjet-2019_008.jpg);
+    filter: brightness(70%);
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: lightgray;
+}
+.home p {
+    font-size: 3rem;
+    word-wrap: break-all;
+    width: 40vw;
+    filter: drop-shadow(2px 4px 4px #18191A);
+    font-family: cursive;
+}
+.news {
+    display: flex;
+    margin: 0;
+    max-width: 100%;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+}
+.headLine img{
+    max-width: 90%;
+}
+.right {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%;
+}
+.subLine img {
+    max-width: 30%;
+}
+.subLine:hover, .headLine:hover{
+    filter: drop-shadow(2px 2px 5px #708c98);
+    cursor: pointer;
+}
+img {
+    border-radius: 10px;
+}
+.about {
+    background-color: #708c98;
+    color: lightgray;
+    display: flex;
+    flex-direction: row;
+    padding: 100px;
+}
+.about-img {
+    display: flex;
+    flex: 2;
+}
+.about-img img {
+    width: 80%;
+}
+.about-description {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+#back{
+    color: #708c98;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 2%;
+    align-self: end;
+}
+#back:hover{
+    background-color: lightgray;
+    filter: drop-shadow(1px 1px 2px #708c98);
+    cursor: pointer;
+}
+#settings{
+    display: none;
+    cursor: pointer;
+}
+#popUp-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 10;
+    display: none;
+}
+#pop-up {
+    position: absolute;
+    z-index: 20;
+    filter: drop-shadow(1px 1px 2px black);
+    width: 800px;
+    height: 80%;
+    display: none;
+    flex-direction: column;
+    top: 100px;
+    left: calc(50% - 400px);
+    background-color: #18191A;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: scroll;
+}
+.sidebar-container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+    align-items: end;
+    display: none;
+}
+.sidebar{
+    position: absolute;
+    z-index: 10000;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    align-items: start;
+    flex-direction: column;
+    background-color: #18191A;
+    align-self: flex-end;
+    scroll-behavior: smooth;
+    display: none;
+}
+.sidebar a{
+    padding: 10px;
+    text-decoration: none;
+    color: #708c98;
+}
+@media screen and (max-width: 1100px){
+    .home p{
+        font-size: 2rem;
+    }
+    .about {
+        flex-direction: column;
+    }
+    .about h1{
+        font-size: 1.5rem;
+    }
+    .about p{
+        font-size: 0.9rem;
+    }
+    .news {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 900px){
+    .navbar {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+    .navbar h1,h2 {
+        font-size: 1rem;
+    }
+    #pop-up{
+        width: 750px;
+    }
+    .logIn{
+        display:none;
+    }
+    #settings{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 20px;
+        color: #708c98;
+        padding: 5px;
+        width: 10%;
+        font-size: 1.5rem;
+    }
+    .settings-container{
+        flex: 1;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    #sidebarOff {
+        align-self: end;
+        padding-top: 20px;
+        cursor: pointer;
+    }
+}

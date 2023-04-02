@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/f50dd2922d.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Cambo&display=swap" rel="stylesheet">
+        <title>Albin Kjuti</title>
+    </head>
+    <body>
+        <div class="sidebar" id="sidebar"></div>
+        <div class="sidebar-container" id="sidebar-container"></div>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo" style="flex: 2; justify-content: center;">
+                    <h1>
+                        Alpin Kjuti
+                    </h1>
+                </div>
+                <div class="info" style="flex: 2;">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#news">News</a>
+                </div> 
+                <div id="sidebar-info" class="logIn" style="flex:1;">
+                    <h2 id="user" class="log" style="display:none;  margin: 10px;"></h2>
+                    <a class="log" href="logIn.html" id="logInButton" onclick="signOut()">Log In</a>
+                </div>
+                <div class="settings-container">
+                    <i class="fa-solid fa-bars" id="settings" onclick="toggleSidebar('on')"></i>
+                </div>
+            </div>
+            <div id="main">
+                <div class="home" id="home">
+                    <p>
+                    "Kur mun, mun. Kur smun, smun. Kur smun, prit kur mun." - Gani Geci
+                    </p>
+                </div>
+                <div class="about" id="about">
+                    <div class="about-img">
+                        <img src="https://www.hungertv.com/app/uploads/2023/02/kevin.jpg" alt="Placeholder image">
+                    </div>
+                    <div class="about-description">
+                        <h1>Kevin Zemra?</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, excepturi dolores recusandae rerum deserunt vitae cupiditate vel. Ducimus fugit quae rem sapiente expedita provident magni illo. Veniam similique, voluptatum soluta consequuntur error assumenda doloribus sed quia beatae cum odit animi, perferendis nemo adipisci ex in tempore officiis! Earum asperiores quisquam eveniet non eligendi natus, reprehenderit rem tenetur accusamus iusto dignissimos, esse eos minus, obcaecati rerum minima sapiente. Nihil accusantium dolorum voluptas accusamus eius, rerum quam, iste voluptatem sint fugiat harum officia soluta. Similique quos aliquam, quasi ex beatae temporibus suscipit minima iste eveniet aut quam corrupti natus optio sequi ipsa?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="news" id="news">
+                <div class="left">
+                    <div class="headLine" onclick="togglePopUp('open', 'card')" id="card">
+                        <img id="card-img" src="https://forum2022.globsec.org/wp-content/uploads/2022/05/Albin-Kurti-scaled.jpg" alt="Placeholder image">
+                        <h1 id="card-title">Alpin Kjuti</h1>
+                        <p id="card-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse consequatur, vitae deleniti unde assumenda quae at excepturi, magnam sint aperiam sequi vel ad corporis. Libero quas voluptatem veritatis harum nihil adipisci laudantium praesentium, vero voluptate ducimus ut pariatur distinctio id maiores, quia explicabo. Fuga culpa perferendis molestias eligendi possimus, impedit ea ex magnam exercitationem reiciendis illo, provident iusto porro deleniti? Earum adipisci, voluptas fuga reiciendis repellendus et nisi maiores perspiciatis neque numquam perferendis odit ratione? Molestiae a eos cupiditate explicabo?</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="subLine" id="card-1" onclick="togglePopUp('open', 'card-1')">
+                        <img id="card-img-1" src="http://albanianpost.com/wp-content/uploads/2021/02/kurti-kurti-albin-albin.png" alt="Placeholder image">
+                        <p id="card-p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa maiores provident ab tempore modi hic, ipsam, corporis adipisci cum temporibus, alias molestias fuga. Voluptatem expedita dolores modi nulla dolorem harum.</p>
+                    </div>
+                    <div class="subLine" id="card-2" onclick="togglePopUp('open', 'card-2')">
+                        <img id="card-img-2" src="https://coolnfreshmagazine.com/wp-content/uploads/2020/09/I-patitulluar.jpg" alt="">
+                        <p id="card-p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa maiores provident ab tempore modi hic, ipsam, corporis adipisci cum temporibus, alias molestias fuga. Voluptatem expedita dolores modi nulla dolorem harum.</p>
+                    </div>
+                    <div class="subLine" id="card-3" onclick="togglePopUp('open', 'card-3')">
+                        <img id="card-img-3" src="https://media.sot.com.al/sot.com.al/media3/-800-0-623582668a78c.jpg" alt="Placeholder image">
+                        <p id="card-p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa maiores provident ab tempore modi hic, ipsam, corporis adipisci cum temporibus, alias molestias fuga. Voluptatem expedita dolores modi nulla dolorem harum.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="popUp-container">
+                <div id="pop-up">
+                </div>
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <script src="index.js" defer></script>
+    </body>
+</html>
