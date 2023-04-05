@@ -65,6 +65,7 @@ html, body {
 }
 #dropdown li{
     padding: 5px;
+    cursor: pointer;
 }
 #dropdown li:hover {
     background-color: #18191a;

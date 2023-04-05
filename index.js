@@ -73,9 +73,11 @@ let terciaryLogo = document.getElementById("Logo-3")
 
 if(document.getElementById("logo").getAttribute('src') === '/Logo-1.png'){
     terciaryLogo.style.display = "inherit"
+    secondaryLogo.style.display = "inherit"
     baseLogo.style.display = "none"
 } else if(document.getElementById("logo").getAttribute('src') === '/Logo-2.png') {
     baseLogo.style.display = "inherit"
+    terciaryLogo.style.display = "inherit"
     secondaryLogo.style.display = "none"
 } else {
     secondaryLogo.style.display = "inherit"
@@ -103,5 +105,35 @@ const toggleLogo = (id) => {
         secondaryLogo.style.display = "inherit"
         baseLogo.style.display = "inherit"
         terciaryLogo.style.display = "none"
+    }
+}
+
+let userIcon = document.getElementById("userIcon")
+let ltrName = document.getElementById("showUsername")
+let iconName = document.getElementById("showIcon")
+
+if(userIcon.style.display === "none"){
+    iconName.style.display = "inherit"
+    ltrName.style.display = "none"
+} else {
+    iconName.style.display = "none"
+    ltrName.style.display = "inherit"
+}
+
+const toggleUser = (id) => {
+    userIcon.style.display = "inherit"
+    if(id === 'name') {
+        userIcon.style.display = "none"
+        showUser.style.display = "inherit"
+    } else {
+        userIcon.style.display = "inherit"
+        showUser.style.display = "none"
+    }
+    if(userIcon.style.display === "none"){
+        iconName.style.display = "inherit"
+        ltrName.style.display = "none"
+    } else {
+        iconName.style.display = "none"
+        ltrName.style.display = "inherit"
     }
 }
