@@ -93,9 +93,11 @@ const toggleLogo = (id) => {
     }
     if(document.getElementById("logo").getAttribute('src') === '/Logo-1.png'){
         terciaryLogo.style.display = "inherit"
+        secondaryLogo.style.display = "inherit"
         baseLogo.style.display = "none"
     } else if(document.getElementById("logo").getAttribute('src') === '/Logo-2.png') {
         baseLogo.style.display = "inherit"
+        terciaryLogo.style.display = "inherit"
         secondaryLogo.style.display = "none"
     } else {
         secondaryLogo.style.display = "inherit"
