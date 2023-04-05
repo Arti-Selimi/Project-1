@@ -41,6 +41,36 @@ html, body {
 #user{
     border: none;
 }
+.logInDropdown {
+    margin-left: 20px;
+    display: inline-block;
+    position: relative;
+}
+#dropdown {
+    display: none;
+    right: 0;
+    position: absolute;
+    min-width: 150px;
+    filter: drop-shadow(1px 1px 2px #18191a);
+    border-radius: 5px;
+    background-color: #708c98;
+    color: #18191A;
+    height: auto;
+    padding: 5px;
+    margin-top: 15px;
+}
+#dropdown ul {
+    list-style: none;
+    padding: 0;
+}
+#dropdown li {
+    padding: 5px;
+}
+#dropdown li:hover {
+    background-color: #18191a;
+    color: #708c98;
+    border-radius: 5px;
+}
 .navbar a:hover {
     color: #18191A;
     border-radius: 5px;

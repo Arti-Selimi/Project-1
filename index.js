@@ -50,3 +50,19 @@ const toggleSidebar = (toggle) =>{
         sidebarContainer.style.display = "none"
     }
 }
+
+let dropdownBtn =  document.getElementById("dropdownBtn")
+let dropdown = document.getElementById("dropdown")
+let rmDropdownBtn = document.getElementById("rmDropdownBtn")
+
+const toggleDropdown = (direction) =>{
+    if(direction === 'down') {
+        dropdownBtn.style.display = 'none'
+        dropdown.style.display = 'inherit'
+        rmDropdownBtn.style.display = 'flex'
+    } else {
+        dropdown.style.display = 'none'
+        rmDropdownBtn.style.display = 'none'
+        dropdownBtn.style.display = 'flex'
+    }
+}

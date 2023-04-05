@@ -25,6 +25,24 @@
                 <div id="sidebar-info" class="logIn" style="flex:1;">
                     <h2 id="user" class="log" style="display:none;  margin: 10px;"></h2>
                     <a class="log" href="logIn.html" id="logInButton" onclick="signOut()">Log In</a>
+                    <div id="dropdownParent" class="logInDropdown">
+                        <i id="dropdownBtn" class="fa-solid fa-chevron-down fa-xl" onclick="toggleDropdown('down')" style="cursor: pointer;"></i>
+                        <i id="rmDropdownBtn" class="fa-solid fa-chevron-up fa-xl" onclick="toggleDropdown('up')" style="cursor: pointer; display: none;"></i>
+                        <div id="dropdown">
+                            <ul>
+                                <li id="Logo-1">Logo 1</li>
+                                <li id="Logo-2">Logo 2</li>
+                                <li id="Logo-3">Logo 3</li>
+                            </ul>
+                            <ul>
+                                <li id="showUsername">Use username</li>
+                                <li id="showIcon">Use icon</li>
+                            </ul>
+                            <ul>
+                                <li id="Colorway">Change colorway</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="settings-container">
                     <i class="fa-solid fa-bars" id="settings" onclick="toggleSidebar('on')"></i>
