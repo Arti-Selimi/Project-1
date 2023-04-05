@@ -59,11 +59,11 @@ html, body {
     padding: 5px;
     margin-top: 15px;
 }
-#dropdown ul {
+#dropdown ul, .sidebar ul {
     list-style: none;
     padding: 0;
 }
-#dropdown li {
+#dropdown li{
     padding: 5px;
 }
 #dropdown li:hover {
@@ -79,7 +79,6 @@ html, body {
 }
 .home{
     background: url(https://prishtinainsight.com/wp-content/uploads/2019/10/VV_Albin-Kurtii_Zgjedhjet-2019_008.jpg);
-    filter: brightness(70%);
     height: 100vh;
     background-size: cover;
     display: flex;
@@ -200,7 +199,7 @@ img {
     display: none;
 }
 .sidebar{
-    position: absolute;
+    position: fixed;
     z-index: 10000;
     width: 30%;
     height: 100%;
@@ -212,8 +211,9 @@ img {
     flex-direction: column;
     background-color: #18191A;
     align-self: flex-end;
-    scroll-behavior: smooth;
+    scroll-behavior: none;
     display: none;
+    overflow-y: hidden;
 }
 .sidebar a{
     padding: 10px;
@@ -222,10 +222,12 @@ img {
 }
 .footer{
     background-color: #18191A;
+    filter: drop-shadow(10px, 10px, 20px, #18191a);
     color: #708c98;
     height: auto;
     width: 100%;
     display: flex;
+    padding: 0;
 }
 .footer ul {
     width: 100%;
@@ -267,6 +269,7 @@ img {
     }
     .about {
         flex-direction: column;
+        padding: 50px;
     }
     .about h1{
         font-size: 1.5rem;
@@ -277,8 +280,20 @@ img {
     .news {
         flex-direction: column;
     }
+    .sidebar{
+        display: none;
+    }
 }
 @media screen and (max-width: 900px){
+    .home p{
+        font-size: 1.75rem;
+    }
+    .about{
+        padding: 25px;
+    }
+    .logInDropdown{
+        display: none;
+    }
     .navbar {
         font-size: 0.9rem;
         padding: 10px;
@@ -310,5 +325,17 @@ img {
         align-self: end;
         padding-top: 20px;
         cursor: pointer;
+    }
+    .sidebar li{
+        padding: 5px 10px 5px 10px;
+        cursor: pointer;
+    }
+}
+@media screen and (max-width:450px) {
+    .home p{
+        font-size: 1.2rem;
+    }
+    .about img {
+        display: none;
     }
 }

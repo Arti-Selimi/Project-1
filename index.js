@@ -44,7 +44,7 @@ const toggleSidebar = (toggle) =>{
     if(toggle === 'on') {
         sidebar.style.display = "flex"
         sidebarContainer.style.display = "flex"
-        sidebar.innerHTML = `<i id="sidebarOff" class="fa-solid fa-arrow-right fa-lg" onclick="toggleSidebar('off')"></i>` + sidebarInfo.innerHTML
+        sidebar.innerHTML = `<i id="sidebarOff" class="fa-solid fa-arrow-right fa-lg" onclick="toggleSidebar('off')"></i>` + sidebarInfo.innerHTML + dropdown.innerHTML
     } else {
         sidebar.style.display = "none"
         sidebarContainer.style.display = "none"
@@ -64,5 +64,42 @@ const toggleDropdown = (direction) =>{
         dropdown.style.display = 'none'
         rmDropdownBtn.style.display = 'none'
         dropdownBtn.style.display = 'flex'
+    }
+}
+
+let baseLogo = document.getElementById("Logo-1")
+let secondaryLogo = document.getElementById("Logo-2")
+let terciaryLogo = document.getElementById("Logo-3")
+
+if(document.getElementById("logo").getAttribute('src') === '/Logo-1.png'){
+    terciaryLogo.style.display = "inherit"
+    baseLogo.style.display = "none"
+} else if(document.getElementById("logo").getAttribute('src') === '/Logo-2.png') {
+    baseLogo.style.display = "inherit"
+    secondaryLogo.style.display = "none"
+} else {
+    secondaryLogo.style.display = "inherit"
+    baseLogo.style.display = "inherit"
+    terciaryLogo.style.display = "none"
+}
+
+const toggleLogo = (id) => {
+    if(id === 'baseLogo') {
+        document.getElementById("logo").setAttribute('src', '/Logo-1.png')
+    } else if(id === 'secondaryLogo') {
+        document.getElementById("logo").setAttribute('src', '/Logo-2.png')
+    } else {
+        document.getElementById("logo").setAttribute('src', '/Logo-3.png')
+    }
+    if(document.getElementById("logo").getAttribute('src') === '/Logo-1.png'){
+        terciaryLogo.style.display = "inherit"
+        baseLogo.style.display = "none"
+    } else if(document.getElementById("logo").getAttribute('src') === '/Logo-2.png') {
+        baseLogo.style.display = "inherit"
+        secondaryLogo.style.display = "none"
+    } else {
+        secondaryLogo.style.display = "inherit"
+        baseLogo.style.display = "inherit"
+        terciaryLogo.style.display = "none"
     }
 }

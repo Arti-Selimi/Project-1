@@ -15,7 +15,7 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo" style="flex: 2; justify-content: center;">
-                    <img src="/alpin-kjuti-low-resolution-color-logo.png" alt="" style="width: 150px;">
+                    <img id="logo" src="/Logo-1.png" alt="" style="width: 150px;">
                 </div>
                 <div class="info" style="flex: 2;">
                     <a href="#home">Home</a>
@@ -30,9 +30,9 @@
                         <i id="rmDropdownBtn" class="fa-solid fa-chevron-up fa-xl" onclick="toggleDropdown('up')" style="cursor: pointer; display: none;"></i>
                         <div id="dropdown">
                             <ul>
-                                <li id="Logo-1">Logo 1</li>
-                                <li id="Logo-2">Logo 2</li>
-                                <li id="Logo-3">Logo 3</li>
+                                <li id="Logo-1" onclick="toggleLogo('baseLogo')">Logo 1</li>
+                                <li id="Logo-2" onclick="toggleLogo('secondaryLogo')">Logo 2</li>
+                                <li id="Logo-3" onclick="toggleLogo('terciaryLogo')">Logo 3</li>
                             </ul>
                             <ul>
                                 <li id="showUsername">Use username</li>
