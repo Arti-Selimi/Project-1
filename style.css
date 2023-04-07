@@ -7,6 +7,7 @@ html, body {
     margin: 0;
     flex-direction: column;
     width: 100vw;
+    height: 100vh;
     scroll-behavior: smooth;
 }
 .navbar {
@@ -299,6 +300,9 @@ img {
         font-size: 0.9rem;
         padding: 10px;
     }
+    .info{
+        display: none;
+    }
     .navbar h1,h2 {
         font-size: 1rem;
     }
@@ -307,6 +311,7 @@ img {
     }
     .logIn{
         display:none;
+        flex: 1;
     }
     #settings{
         display: flex;
@@ -338,5 +343,11 @@ img {
     }
     .about img {
         display: none;
+    }
+    #pop-up{
+        width: 300px;
+        height: 500px;
+        left: calc(50% - 165px);
+
     }
 }
